@@ -120,7 +120,7 @@ namespace Labb1LINQ
             Console.ReadLine();
         }
 
-        // Checks if the subject "Programming 1" exists in the database
+        // Checks if the subject "Programmering 1" exists in the database
         public static void CheckSubject()
         {
             SchoolDbContext context = new SchoolDbContext();
@@ -128,22 +128,22 @@ namespace Labb1LINQ
             Console.Clear();
 
             // Checks for existence
-            bool exists = context.Subjects.Any(s => s.SubjectName == "Programming 1");
+            bool exists = context.Subjects.Any(s => s.SubjectName == "Programmering 1");
 
             // Prints out the result of the check
             if (!exists)
             {
-                Console.WriteLine("Programming 1 does not exist..");
+                Console.WriteLine("Programmering 1 does not exist..");
             }
             else
             {
-                Console.WriteLine("Programming 1 exists!");
+                Console.WriteLine("Programmering 1 exists!");
             }
 
             Console.ReadLine();
         }
 
-        // Updates the name of the subject "Programming 2" to "OOP"
+        // Updates the name of the subject "Programmering 2" to "OOP"
         public static void ChangeSubject()
         {
             SchoolDbContext context = new SchoolDbContext();
@@ -152,7 +152,7 @@ namespace Labb1LINQ
 
             // Finds the subject to update
             var subjectToUpdate = context.Subjects
-                .FirstOrDefault(s => s.SubjectName == "Programming 2");
+                .FirstOrDefault(s => s.SubjectName == "Programmering 2");
 
             // Checks if the subject exists and updates it
             if (subjectToUpdate != null)
@@ -163,7 +163,7 @@ namespace Labb1LINQ
             }
             else
             {
-                Console.WriteLine("Programming 2 was not found and therefore cannot be updated..");
+                Console.WriteLine("Programmering 2 was not found and therefore cannot be updated..");
             }
 
             Console.ReadLine();
